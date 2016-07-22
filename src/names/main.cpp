@@ -359,6 +359,7 @@ CheckNameTransaction (const CTransaction& tx, unsigned nHeight,
   if (Params ().IsHistoricBug (tx.GetHash (), nHeight, type))
     return true;
 
+  //CuCo: At most one input and output should be a name operation!
   /* As a first step, try to locate inputs and outputs of the transaction
      that are name scripts.  At most one input and output should be
      a name operation.  */
